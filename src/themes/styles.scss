@@ -1,0 +1,44 @@
+/*
+* File: styles.scss
+* Description: Importing all the scss files
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import './styles/global/variable';
+@import './styles/global/common';
+@import './styles/mixins/font-size';
+@import './styles/base/typography';
+
+//Partials
+@import './styles/partials/background';
+@import './styles/partials/buttons';
+@import './styles/partials/dropdown';
+@import './styles/partials/form';
+@import './styles/partials/icons';
+@import './styles/partials/img';
+@import './styles/partials/input';
+@import './styles/partials/links';
+@import './styles/partials/loader';
+@import './styles/partials/modal';
+@import './styles/partials/navigation';
+@import './styles/partials/text';
+@import './styles/partials/toastmessages';
+
+//Components
+@import './styles/components/carousel';
+@import './styles/components/filter';
+@import './styles/components/footer';
+@import './styles/components/header';
+@import './styles/components/hero';
+@import './styles/components/languages';
+@import './styles/components/myaccount';
+@import './styles/components/progresssteps';
+@import './styles/components/search';
+@import './styles/components/selector_cards';
+@import './styles/components/sort';
+@import './styles/components/variants';
+
+//Pages
+@import './styles/pages/home';
+

@@ -1,0 +1,35 @@
+/*
+* File: buttons.scss
+* Description: Button styles
+*/
+
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,8%);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+  
+  .btn {
+   color:$white;
+   text-decoration:none;
+   padding:10px;
+   font-size:1em;
+  }
+  
+  .btn-primary {
+     @include button-bg($primary);
+  }
+  
+  .btn-secondary {
+     @include button-bg($secondary);
+  }
+  
+  .btn-orange{
+     @include button-bg($orange);
+  }
