@@ -3,8 +3,16 @@
 * Description: Importing all the scss files
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/*
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url('//fonts.googleapis.com/css2?family=Roboto:wght@400') format('truetype');
+    font-display: swap;
+}
+*/
 @import './styles/global/variable';
 @import './styles/global/common';
 @import './styles/mixins/font-size';
@@ -27,7 +35,6 @@
 
 //Components
 @import './styles/components/carousel';
-@import './styles/components/filter';
 @import './styles/components/footer';
 @import './styles/components/header';
 @import './styles/components/hero';
@@ -38,7 +45,11 @@
 @import './styles/components/selector_cards';
 @import './styles/components/sort';
 @import './styles/components/variants';
+@import './styles/components/productcard';
+@import './styles/components/filters';
 
 //Pages
 @import './styles/pages/home';
-
+@import './styles/pages/productselector';
+@import './styles/pages/plp';
+@import './styles/pages/pdp';

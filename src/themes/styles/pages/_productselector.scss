@@ -1,0 +1,19 @@
+/*
+* File: productselector.scss
+* Description: productselector styles
+*/
+@media screen and (max-width: 600px) {
+    @mixin bg($bg) {
+        background: $bg;
+      }
+    .p-survey{
+      min-height: 100vh;
+      @include bg($steps-body-bg);
+
+        &-container {
+          padding: $site-padding;
+          padding-bottom: 20px
+        }
+    }
+    
+}

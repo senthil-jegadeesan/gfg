@@ -1,0 +1,107 @@
+/*
+* File: header.scss
+* Description: Header styles
+*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  
+  &.header__sticky {
+    background: $white;
+    -webkit-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: -1px 3px 5px -2px rgba(0,0,0,0.75);
+  }
+
+  &.subheader {
+    background: $sticky-header-blue;
+    position: relative;
+  }
+  
+  &-container {
+    display: flex;
+    padding: $header-padding;
+    
+  }
+  
+  &-left {
+    flex-basis: 50%;
+  }
+  
+  &-right {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  &-logo {
+    margin-left: 20px;
+    img {
+      max-width: 70%;
+    }
+  }
+
+  &-icon {
+    height: 20px;
+    margin: 0 11px;
+    text-decoration: none;
+    width: 20px;
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  &-search {
+    &:after {
+      background: url('../../../assets/images/Search.svg') no-repeat;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &-myaccount {
+    &:after {
+      background: url('../../../assets/images/account.svg') no-repeat;
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  &-language {
+    margin-right: 20px;
+    span {
+      @include font-rem(10px, 20px);
+      border: solid 2px $dark-gray1;
+      border-radius: 50%;
+      color: $dark-gray1;
+      display: block;
+      padding: 1px 3px 0 3.5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:after {
+      background: url('../../../assets/images/Dwn_arw.svg') no-repeat;
+      height: 20px;
+      left: 27px;
+      top: 8px;
+      width: 20px;
+    }
+  }
+
+  &-arrow {
+    position: relative;
+    top: 2px;
+  }
+  
+  &-back {
+    font-weight: 500;
+    color: $dark-gray1;
+    line-height: 26px;
+    padding-left: 20px;
+  }
+}

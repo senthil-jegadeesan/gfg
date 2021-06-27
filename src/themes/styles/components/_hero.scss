@@ -1,0 +1,93 @@
+.hero {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+
+    &:first-child {
+        margin: 0;
+    }
+
+    h1,
+    h2 {
+        color: $white;
+    }
+
+    &-content {
+        height: 100%;
+        position: relative;
+        width: 100%;
+        p {
+            @include font-rem(14px, 21px);
+            color: $white;
+            margin-top: 20px;
+        }
+        .btn {
+            margin-top: 15px;
+            display: flex;
+            width: 125px;
+            justify-content: center;
+            &.btn__right {
+                margin-left: auto;
+            }
+        }
+        &--less {
+            padding: 130px 0;
+        }
+        &.tractor-of-the-week {
+            padding: 30px 30px 250px;
+        }
+    }
+    
+    &-overlay {
+        background: rgba(0, 0 , 0 , 0.6);
+        color: $white;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &.opacity1 {
+            background: rgba(36, 36, 36, 1);
+        }
+        &.bottom {
+            bottom: 0;
+            height: auto;
+            padding: 20px;
+            position: absolute;
+            text-align: center;
+            top: inherit;
+         }
+         &.hero-overlay__educational {
+             padding: 30px;
+         }
+    }
+
+    &-bigtext {
+        @include font-rem(24px, 30px);
+        color: $white;
+        font-weight: 300;
+        margin: 0;
+        padding: 0;
+        &.medium {
+            font-weight: 500;
+        }
+        &.left {
+            text-align: left;
+        } 
+    }
+
+    &-image {
+        position: relative;
+        width: 100%;
+        img {
+            display: block;
+            height: 100%;
+            left: 50%;
+            min-width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+    }
+}

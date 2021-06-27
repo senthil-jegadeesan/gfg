@@ -1,0 +1,60 @@
+.footer {
+    background: $footer-gray;
+    display: flex;
+    flex-wrap: wrap;
+    padding: $footer-padding;
+    margin-top: 20px;
+    &-container {
+        border-bottom: 1px solid $footer-border;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 0 0 10px 5px;
+        width: 100%;
+        
+        li {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-links {
+        @include font-rem(18px, 24px);
+        color: $footer-links;
+        display: block;
+        &:after {
+            background: url('../../../assets/images/Lft_Arw_g.svg') no-repeat;
+            height: 16px;
+            left: inherit;
+            right: 0;
+            top: 4px;
+            width: 12px;
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+        }
+    }
+    
+    &-copyright {
+        color: $copyright;
+        @include font-rem(14px);
+        margin-top: 20px;
+    }
+
+    &.subfooter {
+        background: $white;
+        bottom: 0;
+        display: flex;
+        padding: 25px 15px;
+        position: fixed;
+        width: 100%;
+        justify-content: flex-end;
+
+        -webkit-box-shadow: 1px -2px 5px 0px rgba(180, 180, 180, 0.35);
+        -moz-box-shadow: 1px -2px 5px 0px rgba(180, 180, 180, 0.35);
+        box-shadow: 1px -2px 5px 0px rgba(180, 180, 180, 0.35);
+
+    }
+}

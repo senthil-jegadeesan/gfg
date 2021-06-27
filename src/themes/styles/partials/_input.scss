@@ -1,0 +1,56 @@
+.gfg-input {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    .checkmark {
+        bottom: 0;
+        height: 24px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 24px;
+      }
+
+      &.input-radio {
+        .checkmark {
+          background: url('../../../assets/images/Grey2_tik.svg') no-repeat;
+        }
+      }
+
+      &.input-checkbox {
+        .checkmark {
+          left: 0;
+          right: inherit;
+          background: url('../../../assets/images/Untik.svg') no-repeat;
+        }
+      }
+
+    input {
+        &[type="radio"],
+        &[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+        &[type="radio"] {
+            &:checked {
+                ~ .checkmark {
+                    background: url('../../../assets/images/Green_tik.svg') no-repeat;
+                  }
+            }
+        }
+        &[type="checkbox"] {
+          &:checked {
+              ~ .checkmark {
+                  background: url('../../../assets/images/Orenge_tik.svg') no-repeat;
+                }
+          }
+      }
+      }
+  } 

@@ -21,6 +21,7 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
+  font-family: $primary-font;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -43,7 +44,8 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  list-style-type: none;
 }
 
 a {
@@ -55,7 +57,7 @@ a {
 
   a:hover {
     color: $dark-gray1;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   svg:not(:root) {
@@ -91,4 +93,8 @@ a {
     padding: 0 $site-padding;
     margin-right: auto;
     margin-left: auto;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }

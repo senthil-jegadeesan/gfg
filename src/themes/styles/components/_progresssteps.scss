@@ -1,0 +1,51 @@
+.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 0 0 20px;
+  background: $white;
+
+  &-level {
+    border: solid $progress-border-gray 2px;
+    border-radius: 50%;
+    color: $progress-text-gray;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    height: 35px;
+    line-height: 32px;
+    text-align: center;
+    width: 35px;
+  }
+  
+  &-text {
+    color: $progress-step-gray;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 7px;
+    min-width: 70px;
+    text-align: center;
+  }
+
+  &-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+
+      .progress-level {
+        border: solid $primary 2px;
+        color: $primary;
+      }
+
+      .progress-text {
+        color: $dark-gray1;
+        font-weight: 400;
+      }
+      
+    }
+  }
+}

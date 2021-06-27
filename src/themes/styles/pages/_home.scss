@@ -1,0 +1,72 @@
+.product-selector {
+    margin-top: 20px;
+    padding: $site-padding;
+    &--link {
+        background: $light-gray1;
+        border-radius: 3px;
+        color: $dark-gray1;
+        display: flex;
+        font-weight: 500;
+        padding: 20px;
+        justify-content: center;
+        &:after {
+            background: url('../../../assets/images/Lft_arw_y.svg') no-repeat;
+            height: 42px;
+            left: inherit;
+            right: 15px;
+            top: 10px;
+            width: 42px;
+        }
+    }
+}
+.categories {
+    margin-top: 30px;
+    padding: $site-padding;
+
+    &-container {
+        width: 100%;
+    }
+
+    &-card {
+        background: $light-gray1;
+        border-radius: 3px;
+        color: $dark-gray1;
+        display: flex;
+        margin-bottom: 10px;
+        max-height: 105px;
+    }
+    &-name,
+    &-img {
+        display: flex;
+        flex-basis: 45%;
+    }
+    &-name {
+        @include font-rem(24px, 24px);
+        align-items: center;
+        padding-left: 20px;
+        font-weight: 300;
+        &.reverse {
+            order: 2;
+        }
+    }
+    &-img {
+        justify-content: flex-end;
+        margin-left: auto;
+        &.reverse {
+            margin-left: inherit;
+            order: 1;
+        }
+    }
+}
+
+.search-dealer {
+    padding: 16px 0 90px;
+    input {
+        padding: 8px 15px;
+        width: 100%;
+    }
+}
+
+.sd {
+    border: solid red 1px;
+}
