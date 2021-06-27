@@ -111,4 +111,13 @@
     color: $question-gray1;
     padding-left: 5px;
   }
+  &-dropdown {
+    margin: 10px 0;
+    select {
+      width: 100%;
+      padding: 10px;
+      border: solid 2px #474747;
+      background: #fff;
+    }
+  }
 }
