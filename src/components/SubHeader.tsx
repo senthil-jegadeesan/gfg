@@ -12,9 +12,9 @@ const Header = (props: IProps) => {
                 <div className="header-left">
                     <a href="/">
                         <img src={backArrow} alt="Auto Shop" title="Auto Shop" className="header-arrow" />
-                        <span className="header-back">Product Selector</span>
+                        <span className="header-back">{props.title}</span>
                     </a>
-                    
+
                 </div>
                 <div className="header-right">
                     <a href="/" className="header-search icon header-icon"></a>

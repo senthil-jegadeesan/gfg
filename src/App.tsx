@@ -7,15 +7,14 @@ import SubHeader from "./components/SubHeader";
 import SubFooter from "./components/SubFooter";
 
 const App = () => {
-
   const PATH_NAME = window.location.pathname;
   return (
     <div>
-      {PATH_NAME === "/" ? <Header /> : <SubHeader title={"Product Selector"} />}
+      {PATH_NAME === "/" ? <Header /> : PATH_NAME !== "/cart" ? <SubHeader title={"Product Selector"} /> : <SubHeader title={"Cart"} />}
       <main>
         <Routes />
       </main>
-      {PATH_NAME === "/" ? <Footer /> : <SubFooter/>}
+      {PATH_NAME === "/" ? <Footer /> : PATH_NAME !== "/cart" && <SubFooter />}
     </div>
   );
 }

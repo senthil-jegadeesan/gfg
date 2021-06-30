@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import ProductSelector from "./pages/ProductSelector";
 import Plp from "./pages/Plp";
 import Pdp from "./pages/Pdp";
+import Cart from "./pages/Cart";
 
 const router = () => {
     return (
@@ -25,6 +26,7 @@ const router = () => {
                     <Route exact path="/step4" component={() => <ProductSelector />} />
                     <Route exact path="/plp" component={() => <Plp />} />
                     <Route exact path="/pdp" component={() => <Pdp />} />
+                    <Route exact path="/cart" component={() => <Cart />} />
                 </Switch>
             </div>
         </Router>
