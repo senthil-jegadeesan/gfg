@@ -5,20 +5,31 @@ import cat1 from '../assets/images/home/cat1.jpeg';
 import cat2 from '../assets/images/home/cat2.jpeg';
 import cat3 from '../assets/images/home/cat3.jpg';
 import tractor from '../assets/images/home/tractor.jpeg';
+import tractor1 from '../assets/images/home/tractor1.jpg';
 import greensystem from '../assets/images/home/img1.jpeg';
+import crop1 from '../assets/images/home/crop1.jpg';
+import crop2 from '../assets/images/home/crop2.jpg';
+import crop from '../assets/images/home/crop.jpg';
 import Slider from "react-slick";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const sliderData = [{ img: crop1, label: "Sugar cane" }, { img: crop2, label: "Wheat" },
+{ img: crop, label: "Rice" }, { img: crop2, label: "Wheat" },
+{ img: crop1, label: "Sugar cane" }, { img: crop, label: "Rice" }]
 
 const home = () => {
     var settings = {
-        dots: false,
-        infinite: false,
+        infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
+        slidesToShow: 3,
+        slidesToScroll: 3
+    };
 
     return (
         <div>
+
             <section className="hero">
                 <div className="hero-image">
                     <img src={hero1} />
@@ -26,7 +37,7 @@ const home = () => {
                         <div className="hero-overlay bottom">
                             <h1 className="hero-bigtext">Empower your farming</h1>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -72,7 +83,7 @@ const home = () => {
                             </p>
                             <a href="/" className="btn btn-yellow btn__right">Learn more</a>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
@@ -81,7 +92,7 @@ const home = () => {
                 <div className="hero-image">
                     <img src={tractor} />
                     <div className="hero-content tractor-of-the-week">
-                    <h2 className="hero-bigtext icon icon-arrow">Farmtrac Champion 39 Tractor</h2>
+                        <h2 className="hero-bigtext icon icon-arrow">Farmtrac Champion 39 Tractor</h2>
                         <div className="hero-overlay opacity1 bottom">
                             <h3 className="hero-bigtext medium left">Tractor of the week</h3>
                         </div>
@@ -89,15 +100,27 @@ const home = () => {
                 </div>
             </section>
 
-            <section className="carousel">
-               Slider
-            </section>
+
+            <Slider {...settings}>
+                {sliderData.map((data) => <div className="carousel">
+                    <img src={data.img} />
+                    <div className="carousel-container">
+                        <span className="carousel-text">{data.label}</span>
+                    </div>
+                </div>)}
+
+
+
+            </Slider>
+
+
+
 
             <section className="hero">
                 <div className="hero-image">
                     <img src={greensystem} />
                     <div className="hero-content tractor-of-the-week">
-                    <h2 className="hero-bigtext icon icon-arrow">Green System Cultivator</h2>
+                        <h2 className="hero-bigtext icon icon-arrow">Green System Cultivator</h2>
                         <div className="hero-overlay opacity1 bottom">
                             <h3 className="hero-bigtext medium left">Tractor of the week</h3>
                         </div>
@@ -111,9 +134,9 @@ const home = () => {
                     <div className="hero-content">
                         <div className="hero-overlay hero-overlay__educational">
                             <h2 className="hero-bigtext">Find Dealer</h2>
-                           <div className="search-dealer">
-                               <input type="text" name="" value="" placeholder="Search by pin or name"/>
-                           </div>
+                            <div className="search-dealer">
+                                <input type="text" name="" value="" placeholder="Search by pin or name" />
+                            </div>
                         </div>
                     </div>
                 </div>
