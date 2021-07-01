@@ -1,12 +1,22 @@
 .p-pdp {
     background: #F1F1F1;
     min-height: 100vh;
-    padding: 30px 15px 120px;
+    padding: 30px 20px 120px;
     &-gallery {
         display: flex;
     }
     .card {
         margin-bottom: 15px;
+    }
+
+    &-slidercard{
+        padding: 20px;
+        background: #F1F1F1;
+
+        img{
+            
+            height: 250px;
+        }
     }
     &-details {
         color: $price-gray;
@@ -83,4 +93,12 @@
         display: flex;
         margin-bottom: 10px;
      }
+}
+.slick-list {
+    height: 320px !important;
+}
+
+.slick-dots li button:before {
+    font-size: 10px !important;
+   
 }
