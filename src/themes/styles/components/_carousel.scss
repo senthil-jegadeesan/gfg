@@ -1,4 +1,17 @@
 .carousel {
+  &.home {
+    padding-left: 20px;
+    margin: 20px 0;
+    p {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .slick-slide {
+      .carousel {
+        padding-right: 4px;
+      }
+    }
+  }
   position: relative;
     &-container {
         position: absolute;
@@ -12,5 +25,7 @@
       color: white;
       white-space: nowrap;
     }
-
+    &.pdp {
+      margin-top: -11px;
+    }
 }

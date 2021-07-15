@@ -10,7 +10,7 @@
         padding: 20px;
         justify-content: center;
         &:after {
-            background: url('../../../assets/images/Lft_arw_y.svg') no-repeat;
+            background: url('content/dam/venia/images/Lft_arw_y.svg') no-repeat;
             height: 42px;
             left: inherit;
             right: 15px;
@@ -47,6 +47,7 @@
         font-weight: 300;
         &.reverse {
             order: 2;
+            justify-content: flex-end;
         }
     }
     &-img {
@@ -55,18 +56,38 @@
         &.reverse {
             margin-left: inherit;
             order: 1;
+            justify-content: flex-start;
         }
     }
 }
 
 .search-dealer {
-    padding: 16px 0 90px;
+    padding: 16px 0 50px;
     input {
         padding: 8px 15px;
         width: 100%;
     }
 }
-
-.sd {
-    border: solid red 1px;
+.goto-dealer {
+    color: #FFF700;
+    text-align: right;
+    font-weight: 500;
+    padding-right: 60px;
+    &:after {
+        color: $dark-gray1;
+        background: #FFF700;
+        width: 40px;
+        height: 40px;
+        top: -7px;
+        content: '\203A';
+        border-radius: 50%;
+        left: inherit;
+        right: 0;
+        font-size: 37px;
+        line-height: 36px;
+        text-align: center;
+    }
+}
+.cmp-container main.container, .categories.aem-GridColumn {
+    padding: 0;
 }

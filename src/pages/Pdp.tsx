@@ -17,34 +17,36 @@ const pdp = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows:false
     };
 
     return (
         <div>
-            <Slider {...settings}>
-                <div className="p-pdp-slidercard">
-                    <div className="card">
-                        <img src={tractor} />
+            <div className="carousel pdp">
+                <Slider {...settings}>
+                    <div className="p-pdp-slidercard">
+                        <div className="card">
+                            <img src={tractor} />
+                        </div>
                     </div>
-                </div>
-                <div className="p-pdp-slidercard">
-                    <div className="card">
-                        <img src={tractor1} />
+                    <div className="p-pdp-slidercard">
+                        <div className="card">
+                            <img src={tractor1} />
+                        </div>
                     </div>
-                </div>
-                <div className="p-pdp-slidercard">
-                    <div className="card">
-                        <img src={cat1} />
+                    <div className="p-pdp-slidercard">
+                        <div className="card">
+                            <img src={cat1} />
+                        </div>
                     </div>
-                </div>
-                <div className="p-pdp-slidercard">
-                    <div className="card">
-                        <img src={cat2} />
+                    <div className="p-pdp-slidercard">
+                        <div className="card">
+                            <img src={cat2} />
+                        </div>
                     </div>
-                </div>
-
-            </Slider>
+                </Slider>
+            </div>
             <div className="p-pdp">
 
                 <div className="p-pdp-details card">
@@ -56,15 +58,19 @@ const pdp = () => {
                         <span className="rated">&#9733;</span>
                         <span>&#9733;</span>
                     </div>
-                    <div className="price">Rs.4.5 Lakhs</div>
+                    <div className="price hide">Rs.4.5 Lakhs</div>
                 </div>
 
-                <div className="p-pdp-btns">
+                <div className="p-pdp-btns hide">
                     <a href="/" className="btn btn-white left column2">Description</a>
                     <a href="/" className="btn btn-white right column2 active">Configure</a>
                 </div>
 
-                <div className="card variants">
+                <div className="p-pdp-btns">
+                <a href="/" className="btn btn-primary full-width">Configure</a>
+                </div>
+
+                <div className="card variants hide">
                     <ul>
                         <li>
                             <span className="variants-img"><img src={variant1} /></span>
@@ -93,6 +99,10 @@ const pdp = () => {
                 </div>
 
             </div>
+
+            <footer className="footer subfooter">
+                <a href="/pdp/variant-color/" className="btn btn-primary full-width">configure</a>
+            </footer>
         </div>
     );
 }

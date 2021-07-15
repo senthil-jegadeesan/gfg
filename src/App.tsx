@@ -14,7 +14,7 @@ const App = () => {
       <main>
         <Routes />
       </main>
-      {PATH_NAME === "/" ? <Footer /> : PATH_NAME !== "/cart" && <SubFooter />}
+      {PATH_NAME === "/" ? <Footer /> : ''}
     </div>
   );
 }

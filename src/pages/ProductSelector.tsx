@@ -9,8 +9,8 @@ import StepTwo from "../components/StepTwo";
 import StepThree from "../components/StepThree";
 import StepFour from "../components/StepFour";
 
-const arrayList = [{ lavel: 1, label: "size" }, { lavel: 2, label: "Experience" }, { lavel: 3, label: "Terrain" },
-{ lavel: 4, label: "Crops" }, { lavel: 5, label: "Finish" }]
+const arrayList = [{ lavel: 1, label: "size"}, { lavel: 2, label: "Experience" }, { lavel: 3, label: "Terrain"},
+{ lavel: 4, label: "Crops"}, { lavel: 5, label: "Finish"}]
 
 const ProductSelector = () => {
     const PATH_NAME = window.location.pathname;
@@ -29,10 +29,11 @@ const ProductSelector = () => {
         steps = <StepFour/>
         stepQuestion = <QuestionCard4 />;
     }
+    let current = 0;
     return (
         <div className="p-survey">
             <ul className="progress">
-                {arrayList.map((data) => <Step level={data.lavel} label={data.label} />)}
+                {arrayList.map((data, index) => <Step level={data.lavel} label={data.label} current={index} />)}
             </ul>
             <div className="p-survey-container">
                 {stepQuestion}

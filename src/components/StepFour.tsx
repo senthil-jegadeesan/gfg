@@ -32,6 +32,11 @@ const StepFour = () => {
                 </div>
             </div>
 
+            <footer className="footer subfooter">
+                <a href="/" className="btn btn-secondary left column2">Back</a>
+                <a href="/pdp/variant-color/" className="btn btn-primary right column2">Next</a>
+            </footer>
+
         </div>
     );
 }

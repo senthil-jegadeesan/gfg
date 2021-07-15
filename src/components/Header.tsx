@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import menu from '../assets/images/Menu.svg';
 import logo from '../assets/images/Logo.svg';
 
 const Header = () => {
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+    window.addEventListener("scroll", () => {
+        setScroll(window.scrollY > 50);
+    });
+    }, []);
+
     return (
-        <header className="header">
+        <header className={scroll ? "header__sticky header" : "header"}>
             <div className="header-container">
                 <div className="header-left">
                     <a href="/">

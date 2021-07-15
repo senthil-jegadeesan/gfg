@@ -5,6 +5,7 @@
 
 .header {
   position: fixed;
+  top: -1px;
   width: 100%;
   z-index: 1;
   
@@ -22,7 +23,7 @@
   
   &-container {
     display: flex;
-    padding: $header-padding;
+    padding: 20px 15px 16px;
     
   }
   

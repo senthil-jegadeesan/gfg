@@ -13,7 +13,7 @@ html {
     text-rendering: geometricPrecision;
 }
 html {
-  font-family: $primary-font;
+  font-family: $primary-font !important;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -21,7 +21,7 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  font-family: $primary-font;
+  font-family: $primary-font !important;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -97,4 +97,13 @@ a {
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+  .hide {
+    display: none !important;
+  }
+  .full-width {
+    width: 100%;
+  }
+  ul {
+    padding-left: 0;
   }

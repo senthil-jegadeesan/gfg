@@ -36,7 +36,10 @@ const StepTwo = () => {
                     <span className="checkmark"></span>
                 </label>
             </div>
-
+            <footer className="footer subfooter">
+                <a href="/" className="btn btn-secondary left column2">Back</a>
+                <a href="/step3" className="btn btn-primary right column2">Next</a>
+            </footer>
         </div>
     );
 }

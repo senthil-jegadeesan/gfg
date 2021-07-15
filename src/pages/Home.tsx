@@ -1,9 +1,9 @@
 import React from 'react';
 import hero1 from '../assets/images/home/1.jpeg';
 import hero2 from '../assets/images/home/seeds.jpeg';
-import cat1 from '../assets/images/home/cat1.jpeg';
-import cat2 from '../assets/images/home/cat2.jpeg';
-import cat3 from '../assets/images/home/cat3.jpg';
+import cat1 from '../assets/images/Image_26.png';
+import cat2 from '../assets/images/Mask_Group_8.png';
+import cat3 from '../assets/images/Mask_Group_5.png';
 import tractor from '../assets/images/home/tractor.jpeg';
 import tractor1 from '../assets/images/home/tractor1.jpg';
 import greensystem from '../assets/images/home/img1.jpeg';
@@ -21,10 +21,11 @@ const sliderData = [{ img: crop1, label: "Sugar cane" }, { img: crop2, label: "W
 
 const home = () => {
     var settings = {
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 2.5,
+        slidesToScroll: 2,
+        arrows:false
     };
 
     return (
@@ -59,7 +60,7 @@ const home = () => {
                     <div className="categories-card">
                         <div className="categories-name reverse">Harvesters</div>
                         <div className="categories-img reverse">
-                            <img src={cat2} alt="Tractors" title="Tractors" />
+                            <img src={cat1} alt="Tractors" title="Tractors" />
                         </div>
                     </div>
 
@@ -101,18 +102,17 @@ const home = () => {
             </section>
 
 
-            <Slider {...settings}>
-                {sliderData.map((data) => <div className="carousel">
-                    <img src={data.img} />
-                    <div className="carousel-container">
-                        <span className="carousel-text">{data.label}</span>
-                    </div>
-                </div>)}
-
-
-
-            </Slider>
-
+            <section className="carousel container home">
+                <p>Products by Crop</p>
+                <Slider {...settings}>
+                    {sliderData.map((data) => <div className="carousel">
+                        <img src={data.img} />
+                        <div className="carousel-container">
+                            <span className="carousel-text">{data.label}</span>
+                        </div>
+                    </div>)}
+                </Slider>
+            </section>
 
 
 
@@ -137,6 +137,7 @@ const home = () => {
                             <div className="search-dealer">
                                 <input type="text" name="" value="" placeholder="Search by pin or name" />
                             </div>
+                            <div className="goto-dealer icon">Go to dealer page</div>
                         </div>
                     </div>
                 </div>

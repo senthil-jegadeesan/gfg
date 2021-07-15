@@ -27,7 +27,7 @@
         .checkmark {
           left: 0;
           right: inherit;
-          background: url('../../../assets/images/Untik.svg') no-repeat;
+          background: url('content/dam/venia/images/Untik.svg') no-repeat;
         }
       }
 
@@ -41,16 +41,56 @@
         &[type="radio"] {
             &:checked {
                 ~ .checkmark {
-                    background: url('../../../assets/images/Green_tik.svg') no-repeat;
+                    background: url('content/dam/venia/images/Green_tik.svg') no-repeat;
                   }
             }
         }
         &[type="checkbox"] {
           &:checked {
               ~ .checkmark {
-                  background: url('../../../assets/images/Orenge_tik.svg') no-repeat;
+                  background: url('content/dam/venia/images/Orenge_tik.svg') no-repeat;
                 }
           }
       }
       }
   } 
+
+  select {
+    padding: 15px;
+    width: 100%;
+    background: #fff;
+  }
+  .select-state {
+    margin: 15px 0;
+  }
+  .surve3 {
+    margin-top:15px;
+  }
+   li.progress-container {
+    visibility: hidden;
+  }
+
+  ul li.progress-container {
+    visibility: visible;
+  }
+.survey-right, .survey-left {
+  padding-right: 40px;
+}
+
+.header__secondaryActions {
+  grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.cmp-AccountContainer__accountTrigger__label {
+  font-size: 0;
+}
+.p-survey {
+  margin-top: 40px;
+}
+.surveypage .cmp-experiencefragment--footer {display: none;}
+.cmp-AccountContainer__accountDropdown__root {
+  left: 0;
+  right:0;
+  transform: inherit;
+}
